@@ -13,8 +13,11 @@ const Navbar = () => {
                 <div className='wrapper'>
                     <section className='left'>
                         <div className='left-wrapper'>
-                            <input placeholder='Search' type="search" className="search" />
-                            <Search className='searchIcon' />
+                            <input placeholder='Search' type="text" className="search" />
+                            <div className="search-icon-container">
+                                <Search className='searchIcon' />
+                            </div>
+
                         </div>
                     </section>
                     <section className="center">
@@ -22,10 +25,10 @@ const Navbar = () => {
                     </section>
                     <section className="right">
                         <ul>
-                            <li><User className='right-icon'/></li>
-                            <li><Wishlist className='right-icon'/></li>
+                            <li><User className='right-icon' /></li>
+                            <li><Wishlist className='right-icon' /></li>
                             <li>
-                                <ShoppingCart className='right-icon'/>
+                                <ShoppingCart className='right-icon' />
                                 <span className='badge'>0</span>
                             </li>
                         </ul>
@@ -33,12 +36,14 @@ const Navbar = () => {
                 </div>
             </header>
             <nav className='navbar'>
-                <ul>
-                    <li><Link to='/products/men'>Men</Link></li>
-                    <li><Link to='products/women'>Women</Link></li>
-                    <li><Link to='products/children'>Children</Link></li>
-                    <li><Link to='products/accessories'>Accessories</Link></li>
-                </ul>
+                <div className='navbar-wrapper'>
+                    <ul>
+                        <li><Link to='/products/men'>Men</Link></li>
+                        <li><Link to='products/women'>Women</Link></li>
+                        <li><Link to='products/children'>Children</Link></li>
+                        <li><Link to='products/accessories'>Accessories</Link></li>
+                    </ul>
+                </div>
             </nav>
         </>
     )
