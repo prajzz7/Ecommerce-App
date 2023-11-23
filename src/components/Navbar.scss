@@ -1,0 +1,126 @@
+.header {
+    height: 60px;
+
+    overflow: hidden;
+
+    .wrapper {
+        height: 100%;
+        padding: 10px 20px;
+        display: flex;
+        box-sizing: border-box;
+        justify-content: space-between;
+
+        .left {
+            display: flex;
+            justify-content: center;
+            flex: 2;
+            align-items: center;
+
+            .left-wrapper {
+                position: relative;
+                display: flex;
+                align-items: center;
+            }
+
+            .search {
+                height: 30px;
+                padding: 0 10px;
+                background-color: #f2f2f2;
+                border-top: 0;
+                border-left: 0;
+                border-right: 0;
+                border-bottom: 2px solid darkgrey;
+                color: darkgrey;
+
+            }
+
+            .searchIcon {
+
+                position: absolute;
+                right: 10px;
+                height: 20px;
+                color: gray;
+                cursor: pointer;
+            }
+        }
+
+        .center {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                /* color: transparent; */
+                background: linear-gradient(90deg, #aad576, #73a942, #538d22);
+                color: transparent;
+                -webkit-background-clip: text;
+                fallback-color: darkgrey;
+            }
+
+        }
+
+        .right {
+            flex: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: flex;
+                gap: 25px;
+
+                li {
+                    display: flex;
+                    position: relative;
+
+                    span {
+                        position: absolute;
+                        right: -5px;
+                        top: -5px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 18px;
+                        width: 18px;
+                        border-radius: 50%;
+                        font-size: 16px;
+                        text-align: center;
+                        background-color: lightsalmon;
+                    }
+                }
+
+            }
+
+            .right-icon {
+                color: darkgrey;
+            }
+        }
+
+    }
+}
+
+.navbar {
+    height: 40px;
+    position: sticky;
+    top: 0;
+    background-color: #aad576;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        gap: 25px;
+        list-style: none;
+
+        li {}
+
+    }
+}
