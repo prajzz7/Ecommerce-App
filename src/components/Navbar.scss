@@ -20,28 +20,60 @@
                 position: relative;
                 display: flex;
                 align-items: center;
+
+                .search {
+                    height: 32px;
+                    padding: 0 10px;
+                    display: flex;
+                    align-items: center;
+                    background-color: white;
+                    border: 0px solid white;
+                    border-radius: 50px;
+                    outline: none;
+                    color: black;
+                    font-weight: 100;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    &::placeholder {
+                        color: #abc2af;
+                        font-size: 14px;
+                        font-weight: bold;
+                        letter-spacing: 0.5px;
+                    }
+                    &:hover{
+                        
+                        background-color: #e6e4e4;
+                    }
+                    
+                }
+
+                .search-icon-container {
+                    position: absolute;
+                    
+                    right: 0px;
+                    top: 0px;
+                    height: 32px;
+                    width: 36px;
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    &:hover{
+                        background-color: #e6e4e4;
+                    }
+                    .searchIcon {
+                        
+                        height: 20px;
+                        // right: 10px;
+                        // height: 20px;
+                        color: gray;
+                        cursor: pointer;
+                    }
+                }
             }
 
-            .search {
-                height: 30px;
-                padding: 0 10px;
-                background-color: #f2f2f2;
-                border-top: 0;
-                border-left: 0;
-                border-right: 0;
-                border-bottom: 2px solid darkgrey;
-                color: darkgrey;
 
-            }
 
-            .searchIcon {
-
-                position: absolute;
-                right: 10px;
-                height: 20px;
-                color: gray;
-                cursor: pointer;
-            }
         }
 
         .center {
@@ -52,10 +84,12 @@
 
             h1 {
                 /* color: transparent; */
-                background: linear-gradient(90deg, #aad576, #73a942, #538d22);
+                background: linear-gradient(90deg, #bacdb0, #729b79, #475b63);
                 color: transparent;
                 -webkit-background-clip: text;
                 fallback-color: darkgrey;
+                letter-spacing: 2px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
             }
 
         }
@@ -76,7 +110,7 @@
                 li {
                     display: flex;
                     position: relative;
-
+                    
                     span {
                         position: absolute;
                         right: -5px;
@@ -89,7 +123,7 @@
                         border-radius: 50%;
                         font-size: 16px;
                         text-align: center;
-                        background-color: lightsalmon;
+                        background-color: #729b79;
                     }
                 }
 
@@ -107,10 +141,20 @@
     height: 40px;
     position: sticky;
     top: 0;
-    background-color: #aad576;
+    background-color: #f2f2f2;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .navbar-wrapper {
+        height: 100%;
+        width: 95%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 2px solid lightgray;
+
+    }
 
     ul {
         display: flex;
@@ -119,8 +163,15 @@
         padding: 0;
         gap: 25px;
         list-style: none;
+        gap: 50px;
 
-        li {}
+        li {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #729b79;
+            font-weight: 550;
+            
+        }
 
     }
 }
