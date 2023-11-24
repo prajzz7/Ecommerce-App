@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.scss'
 import { Search } from 'lucide-react';
@@ -7,23 +7,35 @@ import { ShoppingCart } from 'lucide-react';
 import { Heart as Wishlist } from 'lucide-react';
 
 const Navbar = () => {
+    const [searchHover, setSearchHover] = useState(false)
+    const [searchTyping, setSearchTyping] = useState(false)
     return (
         <>
             <header className='header'>
                 <div className='wrapper'>
                     <section className='left'>
                         <div className='left-wrapper'>
-                            <input placeholder='Search' type="text" className="search" />
-                            <div className="search-icon-container">
+                            <input 
+                                onMouseEnter={e=>setSearchHover(true)}
+                                onMouseLeave={e=>setSearchHover(false)}
+                                onFocus={e=>setSearchTyping(true)}
+                                onBlur={e=>{
+                                    setSearchTyping(false)
+                                    }}
+                                placeholder='Search' 
+                                type="text" 
+                                className={searchTyping?" search search-typing":"search"} />
+                            <div 
+                                className={searchTyping?(searchHover?"search-icon-typing search-icon-container search-field-hovered":"search-icon-typing search-icon-container ") : (searchHover?"search-icon-container search-field-hovered": "search-icon-container")}>
                                 <Search className='searchIcon' />
                             </div>
 
                         </div>
                     </section>
-                    <section className="center">
+                    <section className={searchTyping?"center center-hidden":"center"}>
                         <Link to='/'><h1>ECOVOGUE</h1></Link>
                     </section>
-                    <section className="right">
+                    <section className={searchTyping?"right right-hidden":"right"}>
                         <ul>
                             <li><User className='right-icon' /></li>
                             <li><Wishlist className='right-icon' /></li>
