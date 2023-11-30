@@ -1,0 +1,41 @@
+.slider{
+    height: calc(100vh - 100px);
+    width: 100%;
+    overflow: hidden;
+    
+    position: relative;
+
+    .img-container{
+        display: flex;
+        height: 100%;
+        
+        
+        img{
+            height: 100%;
+            width: 100vw;
+            
+        }
+    }
+    
+    .buttons-container{
+        position: absolute;
+        bottom: 100px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        .button-icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid lightgrey;
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+            color: lightgrey;
+            cursor: pointer;
+        }
+    }
+}
+

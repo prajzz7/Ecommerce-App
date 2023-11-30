@@ -1,0 +1,24 @@
+.featuredProducts{
+    width: 100%;
+
+    .description{
+        display: flex;
+        justify-content: flex-end;
+        margin: 5rem 5rem;
+        align-items: center;
+        .title{
+            flex: 1;
+        }
+
+        .content{
+            flex: 1;
+        }
+    }
+    .images{
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+    }
+}

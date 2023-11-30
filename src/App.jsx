@@ -4,11 +4,11 @@ import {
   Outlet,
   RouterProvider,
 } from "react-router-dom";
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import Categories from './pages/Categories';
-import Product from './pages/Product';
+import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
+import Home from './pages/home/Home';
+import Categories from './pages/categories/Categories';
+import Product from './pages/product/Product';
 
 function App() {
 
