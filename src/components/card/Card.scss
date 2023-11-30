@@ -1,11 +1,12 @@
 .card{
     display: block;
-    height: 200px;
+    height: 300px;
     width: 200px;
-    background-color: yellow;
     overflow: hidden;
-
-    .img{
-        background-size: cover;
+    background-size: cover;
+    box-shadow: 2px 2px 5px 0px grey;
+    img{
+        height: 100%;
+        width: 100%;
     }
 }

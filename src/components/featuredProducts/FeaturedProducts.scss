@@ -4,21 +4,28 @@
     .description{
         display: flex;
         justify-content: flex-end;
-        margin: 5rem 5rem;
+        margin: 5rem 0rem;
+        gap: 5rem;
         align-items: center;
         .title{
             flex: 1;
+            background: linear-gradient(267deg, rgb(65, 63, 67) 0%, rgba(122,138,135,1) 35%, rgba(201,214,217,1) 100%);
+            text-align: end;
+            padding: 10px 10px;
+            border-radius: 0 20px 20px 0;
         }
 
         .content{
-            flex: 1;
+            flex: 2;
+            display: flex;
+            justify-content: flex-end;
         }
     }
     .images{
-        height: fit-content;
+        height: 400px;
         display: flex;
         justify-content: center;
-        gap: 1rem;
+        gap: 5rem;
         width: 100%;
     }
 }
