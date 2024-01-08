@@ -16,7 +16,7 @@ const FeaturedProducts = () => {
         </div>
         <div className="images"> 
             {featuredImages.map(image=>(
-                <Card image={image} key={image.id}/>
+                <Card image={image}/>
             ))}
         </div>
     </div>

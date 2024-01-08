@@ -6,9 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 const Slider = () => {
     const [slide, setSlide] = useState(0)
-    useEffect(()=>{
-        console.log(slide)
-    },[slide])
+    
     function left(){
         setSlide( slide === 0 ? (images.length-1) : (prev => prev - 1) )
     }

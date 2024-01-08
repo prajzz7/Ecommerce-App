@@ -5,10 +5,16 @@ import { Search } from 'lucide-react';
 import { User } from 'lucide-react';
 import { ShoppingCart } from 'lucide-react';
 import { Heart as Wishlist } from 'lucide-react';
+import Cart from '../cart/Cart';
 
 const Navbar = () => {
     const [searchHover, setSearchHover] = useState(false)
     const [searchTyping, setSearchTyping] = useState(false)
+    const [cartShown, setCartShown] = useState(false)
+
+    function toggleCart(){
+        setCartShown((prev)=>!prev)
+    }
     return (
         <>
             <header className='header'>
@@ -40,10 +46,11 @@ const Navbar = () => {
                             <li><User className='right-icon' /></li>
                             <li><Wishlist className='right-icon' /></li>
                             <li>
-                                <ShoppingCart className='right-icon' />
+                                <ShoppingCart className='right-icon' onClick={toggleCart}/>
                                 <span className='badge'>0</span>
                             </li>
                         </ul>
+                        {cartShown && <Cart/>}
                     </section>
                 </div>
             </header>

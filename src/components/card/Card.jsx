@@ -1,11 +1,12 @@
 import React from 'react'
 import './Card.scss'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 const Card = ({ image }) => {
+    
     return (
-        <Link >
-            <div className='card'>
+        <Link to={`/product/${image.id}`}>
+            <div key={image.id} className='card'>                
                 <img src={image.url} />
             </div>
         </Link>
